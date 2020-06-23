@@ -4,8 +4,8 @@ import Routes from './routes';
 import GlobalStyle from './styles/global';
 
 import './config/ReactotronConfig';
-
-function App() {
+import './App.css'
+function App () {
   return (
     <>
       <Routes />

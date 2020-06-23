@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
   * {
     margin:0;
     padding:0;
@@ -8,20 +9,16 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #root{
-    min-height: 100%;
-  }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
 
-  body{
-    background: #7159c1;
-    -webkit-font-smoothing: antialiased;
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+}
 
-  body, input, button{
-    color: #222;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
 
   button{
     cursor: pointer;

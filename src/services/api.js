@@ -1,7 +1,5 @@
-import axios from 'axios';
+import axios from 'axios'
 
-const api = axios.create({
-  baseURL: 'https://api.github.com',
-});
-
-export default api;
+export const API = axios.create({
+  baseURL: 'https://api.spacexdata.com/v4/'
+})
