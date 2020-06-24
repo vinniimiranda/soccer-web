@@ -1,12 +1,13 @@
 import React from 'react'
-import { ReactComponent as LaunchIcon } from '../../assets/icons/launch.svg'
-import { ReactComponent as AstronautIcon } from '../../assets/icons/astronaut.svg'
-import { ReactComponent as RocketIcon } from '../../assets/icons/rocket.svg'
+import { ReactComponent as TrophyIcon } from '../../assets/icons/trophy.svg'
+import { ReactComponent as ClubIcon } from '../../assets/icons/club.svg'
+import { ReactComponent as PlayerIcon } from '../../assets/icons/player.svg'
 
 import { Container, NavList, NavListItem } from './styles'
+import history from '../../services/history'
 
 
-export default function Nav ({ history }) {
+export default function Nav () {
 
     function handleItemClick (path) {
 
@@ -16,16 +17,16 @@ export default function Nav ({ history }) {
         <Container>
             <NavList>
                 <NavListItem onClick={() => handleItemClick('/')} selected={history.location.pathname === "/"} >
-                    <LaunchIcon className="icon" />
-            Launches
+                    <TrophyIcon className="icon" />
+            Ligas
           </NavListItem>
-                <NavListItem selected={history.location.pathname === "/crew"} onClick={() => handleItemClick('crew')}>
-                    <AstronautIcon className="icon" />
-            Crew
+                <NavListItem selected={history.location.pathname === "/teams"} onClick={() => handleItemClick('teams')}>
+                    <ClubIcon className="icon" />
+            Times
             </NavListItem>
                 <NavListItem selected={history.location.pathname === "/rockets"}>
-                    <RocketIcon className="icon" />
-            Rockets
+                    <PlayerIcon className="icon" />
+            Jogadores
           </NavListItem>
             </NavList>
         </Container>
